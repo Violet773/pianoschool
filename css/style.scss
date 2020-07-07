@@ -1,0 +1,1519 @@
+@charset "utf-8";
+
+// font-family
+$baseFontFamily : "Noto Sans JP", "sans-serif", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+
+
+// colors
+$baseColor: #FFF9E1;
+$subColor: #6bc7d4;           
+$keyColor: #fd6576;
+$greenColor: #41c113;
+$fontColor: #444444;
+
+
+// 　Accessories
+* {
+  box-sizing: border-box;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: $fontColor;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+  display: block;
+}
+
+
+
+// 共通Base
+html{ font-size: 62.5%; } 
+
+body{
+    margin: 0 auto;
+    color: $fontColor;
+    font-size: 1.4rem;
+    font-family: $baseFontFamily;
+    background-color: $subColor;
+    line-height: 1.7;
+    letter-spacing: 0.1rem;
+}
+
+
+body {
+  
+  width: 100%;
+  padding: 30px;
+  
+  .wrp {
+    border-radius: 15px;
+    background-color: $baseColor;
+    // max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  
+  #pan {
+    
+    padding: 2.0rem 0 0 2.0rem;
+    
+    .breadcrumb {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    .breadcrumb li {
+      display: inline;
+    }
+    
+    .breadcrumb li:after {
+      font-family: FontAwesome;
+      content: '\f0da';
+      padding: 0 0.2em;
+      color: silver;
+    }
+    
+    .breadcrumb li:last-child:after {
+      content: '';
+    }
+    
+    .breadcrumb li a {
+      text-decoration: none;
+      color: #888;
+    }
+    
+    .breadcrumb li:first-child a:before {
+      
+      font-family: FontAwesome;
+      content: '\f015';
+      font-weight: normal;
+      font-size: 1.1em;
+      margin-right: 0.5rem;
+    }
+    
+    .breadcrumb li a:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  header {
+    
+    .sp-rogo,
+    .menu-btn,
+    .sp-menubtn_toggle {
+      display: none;
+    }
+    
+    .header-in {
+      
+      padding: 2.5rem 0 2.0rem;
+            
+      .pc-menu {
+        text-align:center;
+        
+        li {
+          display: inline-block;
+          font-size: 1.6rem;
+          margin-left: 3.0rem;
+          vertical-align: bottom;
+          position: relative;
+          background: #fff;
+          padding: 0.4rem 1.5rem 0.2rem 3.5rem;
+          color: #474747;
+          border-radius: 0 15px 15px 0;
+          box-shadow: 1px 1px 3px lightgray;
+        }  
+        
+        li:hover {
+          box-shadow: 3px 1px 3px gray;
+        }
+        
+        li::before {
+          font-family: "Font Awesome 5 Free";
+          content:"";
+          display: inline-block;
+          position: absolute;
+          padding: 0em;
+          color: white;
+          font-weight: 900;
+          width: 37px;
+          text-align: center;
+          height: 37px;
+          line-height: 37px;
+          left: -1.0rem;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          border-radius: 50%;
+          box-shadow: 1px 1px 2px grey;
+        }
+        
+        .menu1::before {
+          content: "\f007";
+          background: lighten($keyColor, 10%);
+        }
+        
+        .menu2::before {
+          content: "\f001";
+          background: lighten($greenColor, 10%);
+        }
+        
+        .menu3::before {
+          content: "\f086";
+          background: lighten($subColor, 10%);
+        }
+        
+        .menu4::before {
+          content: "\f128";
+          background: lighten(#FEA700, 10%);
+        }
+        
+        li:nth-of-type(3) {
+          background-color: $baseColor;
+          padding: 0;
+          margin: 0;
+          margin-left: 1.5rem;
+          box-shadow: none;
+          
+          img {
+              width: 70%;
+              margin: 0 auto;
+          }
+        }
+        
+        li:nth-of-type(3)::before{
+          content: none;
+        }
+      }
+    }
+    
+    .submenu {
+      ul {
+        background-color: $subColor;
+        border-radius: 20px 0 0 20px;
+        position: fixed;
+        top: 100px;
+        right: 13px;
+        padding: 23px 7px;
+    
+        li {
+          writing-mode: vertical-rl;
+          
+          a {
+            color: $baseColor;
+          }  
+        }
+      }
+    }
+  }
+  
+  .sp-topimg {
+    display: none;
+  }
+  
+  #intro {
+    
+    width: 80%;
+    margin: 5.0rem auto;
+    
+    h2 {
+      font-size: 2.0rem;
+      line-height: 3;
+      color: $greenColor;
+    }
+    
+    h2::before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f001";
+      margin-right: 1.0rem;
+      font-size: 2.5rem;
+    }
+    
+    .greet-wrp {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 7.0rem;
+    
+    .greet-text {
+      width: 50%;
+      border-radius: 20px;
+      background: #fff;
+      padding: 3.0rem;
+      box-shadow: 0 0 5px #fff;
+      
+      img {
+        width: 15%;
+        margin: 0 auto;
+      }
+      
+      h1 {
+        text-align: center;
+        font-size: 2.0rem;
+        line-height: 4;
+        color: $keyColor;
+      }
+      
+      p {
+        line-height: 2;
+      }
+    }  
+    
+    .greet-img {
+      width: 35%;
+    }
+      
+    }
+    
+    .import-wrp {
+      margin-bottom: 7.0rem;
+      
+      .import-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .import {
+          width: 47%;
+          margin: 1.0rem 0 3.5rem;
+          background: #fff;
+          padding: 1.0rem 3.5rem 2.5rem;
+          border-radius: 8px;
+          box-shadow: 0px 0px 0px 12px #fff;
+          
+          h3 {
+            font-size: 2.0rem;
+          }
+          
+          span {
+            font-size: 4.0rem;
+          }
+          
+          p {
+            line-height: 2;
+          }
+        }
+        
+        .import01 {
+          border: dashed 2px $keyColor;
+          
+          .spanfont {
+            color: $keyColor;
+          }
+        }
+        
+        .import02 {
+          border: dashed 2px $greenColor;
+          
+          .spanfont {
+            color: $greenColor;
+          }
+        }
+        
+        .import03 {
+          border: dashed 2px $subColor;
+          
+          .spanfont {
+            color: $subColor;
+          }
+        }
+        
+        .import04 {
+          border: dashed 2px #FEA700;
+          
+          .spanfont {
+            color: #FEA700;
+          }
+        }
+      }
+    }
+    
+    .teacher-wrp {
+      
+      margin-bottom: 7.0rem;
+      
+      .teacher {
+        display: flex;
+        justify-content: space-between;
+        
+        .teacher-img {
+          width: 35%;
+        }
+        
+        .teacher-text {
+          width: 60%;
+          
+          h4 {
+            font-size: 1.7rem;
+            background: linear-gradient(transparent 70%, #FCFA83 80%);
+            display: inline;
+          }
+          
+          h5 {
+            margin: 2.0rem 0;
+          }
+        }
+      }
+    }
+    
+    .garrely-wrp {
+      
+      .garrely {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+        
+        img {
+          width:30%;
+          margin-bottom: 3.0rem;
+        }
+    }
+    
+  }
+  
+  #class {
+    
+    .class-title {
+      text-align: center;
+      margin: 5.0rem 0 7.0rem 0;
+      font-size: 1.6rem;
+      position: relative;
+    }
+    
+    .class-title::after {
+      content: url(../img/class/fog-mini.jpg);
+      position: absolute;
+    }    
+    
+    .class-wrp {
+      width: 75%;
+      margin: 0 auto;
+      margin-bottom: 8.0rem;
+      display: flex;
+      justify-content: space-between;
+      
+      .class {
+        width: 32%;
+        text-align: center;
+        border-radius: 15px;
+        opacity: 0.6;
+        
+        a {
+          color: #fff;
+          display :block;
+          padding: 3.0rem 1.0rem;
+        }
+        
+        h1 {
+          font-size: 2.5rem;
+          .sponly {
+            display: none;
+          }
+        }
+        
+        h2 {
+          font-size: 2.0rem;
+        }
+      }
+      
+      .class:hover {
+        opacity: 0.8;
+      }
+      
+    }
+    
+    .detail-wrp {
+      width: 80%;
+      margin: 0 auto;
+      
+      .detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10.0rem;
+        
+          
+        .detail-text {
+          width: 55%;
+          
+          h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            opacity: 0.6;
+            color: #fff;
+            border-radius: 10px;
+            padding: 0.3rem;
+            margin-bottom: 3.0rem;
+          }
+        
+          h2 {
+            font-size: 2.0rem;
+          }
+          
+          h5 {
+            margin: 2.0rem 0 1.0rem;
+            font-size: 1.5rem;
+          }
+          
+          h4 {
+            font-size: 1.5rem;
+          }
+          
+          p {
+            margin-bottom: 1.5rem;
+          }
+          
+          i {
+            color: $keyColor;
+          }
+        }
+        
+        .detail-img {
+          width : 40%;
+          
+          img {
+            box-shadow: 2px 2px 4px grey;
+          }
+        }
+      }
+    }
+    
+    .baby {
+      background-color: $keyColor;
+    }
+    
+    .child {
+      background-color: $greenColor;
+    }
+    
+    .hoiku {
+      background-color: $subColor;
+    }
+    
+    .other-wrp {
+      
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 10.0rem;
+      padding: 3.5rem;
+      border: dashed 2px #ffc3c3;
+      border-radius: 20px;
+      position: relative;
+
+      h3 {
+        font-size: 1.7rem;
+        margin-top: 3.0rem;
+        
+        i {
+          margin-right: 1.0rem;
+          color: $keyColor;
+        }
+      }
+      
+      h3:first-of-type {
+        margin-top: 0;
+      }
+      
+      a {
+        color: $subColor;
+      }
+      
+    }
+    
+    .other-wrp::after {
+      content: url(../img/class/kuma.jpg);
+      position: absolute;
+      right: -20%;
+      bottom: 0;
+    }
+  }
+  
+  #voice {
+    
+    .voice-title {
+      text-align: center;
+      margin: 5.0rem 0;
+      font-size: 1.6rem;
+      position: relative;
+    }
+    
+    .voice-title::after {
+      content: url(../img/voice/bird.jpg);
+      position: absolute;
+      margin-left: 1.0rem;
+    }
+    
+    .sp-voice {
+      display: none;
+    }
+    
+    .voice {
+      margin: 5.0rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+    .two-wrp {
+      width: 70%;
+      padding: 3.5rem;
+      border: dashed 2px #ffc3c3;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      
+      .students {
+        width: 46%;
+      }
+      
+      .parents {
+        width: 46%;
+      }
+    }
+    
+    .hoiku {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      
+      .one-wrp {
+        width: 48%;
+        padding: 3.5rem;
+        border: dashed 2px #ffc3c3;
+        border-radius: 20px;
+      }
+    }
+    
+    .gallery {
+      width: 27%;
+      background-color:$baseColor;
+    }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        margin-top: 1.5rem;
+        color: $greenColor;
+      }
+      
+      i {
+        font-size: 2.0rem;
+      }
+      
+  } 
+  }
+  
+  #faq {
+    
+    margin-bottom: 5.0rem;
+    
+    .faq-title {
+      text-align: center;
+      margin: 5.0rem 0;
+      font-size: 1.6rem;
+      position: relative;
+    }
+    
+    .faq-title::after {
+      content: url(../img/faq/hari.jpg);
+      position: absolute;
+      top: -50%;
+    }    
+    
+    .faq-wrp {
+      
+      width: 70%;
+      margin: 0 auto;
+      padding: 4rem;
+      border: dashed 2px #ffc3c3;
+      border-radius: 20px;
+      margin-top: 3.0rem;
+      
+      h1 {
+        font-size: 1.7rem;
+        padding-left: 3.3rem;
+        text-indent: -3.3rem;        
+      }
+      
+      h1::before {
+        content: "Q.";
+        font-size: 1.9rem;
+        color: $greenColor;
+        margin-right: 1.0rem;
+      }
+      
+      p {
+        margin-bottom: 3.0rem;
+        font-size:1.5rem;
+        padding-left: 3.3rem;
+        text-indent: -3.3rem;
+      }
+      
+      p::before {
+        content: "A.";
+        font-size: 1.9rem;
+        color: $keyColor;
+        margin-right: 1.0rem;
+        font-weight: bold
+        
+      }
+    }
+  }
+  
+  #contact {
+      
+      text-align: center;
+      margin-bottom: 5.0rem;
+      
+      .contact-title {
+        margin: 5.0rem 0 ;
+        font-size: 1.6rem;
+        position: relative;
+      }
+      
+      .contact-title::after {
+      content: url(../img/contact/rabi.jpg);
+      position: absolute;
+      top: -50%;
+      }
+      
+      h4 {
+        font-size: 2.0rem;
+        margin-bottom: 2.0rem;
+        background: linear-gradient(transparent 70%, #FCFA83 80%);
+        display: inline;
+      }
+      
+      i {
+        margin-right: 1.0rem;
+      }
+      
+      h5 {
+        font-size: 3.0rem;
+        color: $greenColor;
+      }
+      
+      p {
+        line-height: 2.0;
+      }
+      
+      .contact-tel {
+        
+        margin-top: 6.0rem;
+      }
+      
+      .contact-form {
+        
+        margin-top: 8.0rem;
+        
+        .form-wrp {
+          
+          border: dashed 2px $keyColor;
+          padding: 3.0rem;
+          border-radius: 10px;
+          width: 60%;
+          margin: 0 auto;
+          margin-top: 3.0rem;
+          text-align: left;
+          
+          .form {
+      
+          label, input, textarea{
+              display: block; 
+          }
+          
+          input, textarea{
+            width: 100%;
+            border: 1px solid #ffc3c3;
+            outline: none;
+            padding: 1.0rem;
+            font-size: 1.5rem;
+            transition: border 0.5s;
+            -webkit-transition: border 0.5s;
+            -moz-transition: border 0.5s;
+            -o-transition: border 0.5s;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+          
+          input[type="radio"] {
+            display: inline-block;
+            text-align: left;
+            width: 5%;
+            margin-bottom: 0.5rem;
+          } 
+          
+          input[type="submit"] {
+            border-radius: 15px;
+            box-shadow: 3px 3px 5px grey;
+          }
+          
+          textarea{
+            height: 100px;  
+            resize: none; 
+            overflow: auto;
+          }
+          
+          input[type="submit"]{
+            background-color: $keyColor;
+            color: $baseColor;
+            height: 5.0rem;
+            cursor: pointer;
+            margin-top: 3.0rem;
+            font-size: 1.8rem;
+          }
+          
+          input[type="submit"]:hover{
+              background-color: #ffc3c3;
+              color: $fontColor;
+          }
+          
+          label {
+              font-size: 1.5rem;
+              margin: 2.0rem 0 0.5rem 0;
+              font-weight: bold;
+              text-align: left;
+          }
+          
+          form {
+            width: 40%;
+            margin : 0 auto;
+          }
+        }
+        }
+      }
+    }
+
+  #common {
+    
+    padding: 5.0rem;
+      
+    #acsess {
+      display: flex;
+      justify-content: space-around;
+      
+      
+      .access-text {
+        width: 40%;
+        padding: 0 5.0rem;
+        position: relative;
+        
+        // .deco3 {
+        //   position: absolute;
+        //   left: -3%;
+        //   width: 35px;
+        // }
+        
+        i {
+          margin-right: 1.0rem;
+        }
+        
+        h3 {
+          margin-bottom: 3.0rem;
+        }
+        
+        img {
+          width: 70%;
+        }
+        
+        h4 {
+          font-size: 1.6rem;
+        }
+        
+        p {
+          font-size: 1.6rem;
+        }
+        
+      
+        // .deco4 {
+        // position: absolute;
+        // right: 8%;
+        // width: 40px;
+        // }
+        
+      }
+      
+      .access-text::before {
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 37px;
+        position: absolute;
+        left: -3%;
+        top: -6%;
+        background-image: url(../img/top/deco1.png);
+        background-size: contain;
+        vertical-align: middle;
+      }
+      
+      .access-text::after {
+        content: '';
+        display: inline-block;
+        width: 37px;
+        height: 39px;
+        position: absolute;
+        right: 8%;
+        background-image: url(../img/top/deco3.png);
+        background-size: contain;
+        vertical-align: middle;
+      }
+      
+      .gmap {
+        width: 60%;
+        
+        iframe {
+          width:100%;
+        }
+      }
+    }
+    
+  }
+
+  #pageup {
+    cursor: pointer;
+    font-size: 4.0rem;
+    position: fixed;
+    right: 5%;
+    bottom: 3%;
+    color: $keyColor;
+  }
+  
+  #pageup:hover {
+    opacity: 0.7;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+
+/*------------------pc1060以下-----------------
+---------------------------------------------*/
+@media screen and (max-width:1060px) {
+  
+  body {
+    
+    header {
+      
+      .pc-menu,
+      .submenu {
+        display: none;
+      }
+      
+      .sp-rogo {
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+      }
+        
+      .menu-btn {
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 7%;
+        cursor: pointer;
+        font-size: 4.0rem;
+        color: $keyColor;
+      }
+        
+      .sp-menubtn_toggle {
+      
+        width: 90%;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        background: $baseColor;
+        margin: 0 auto;
+        z-index: 999;
+        padding: 2.0rem 0;
+        
+        li{
+          
+          list-style: none;
+          position: relative;
+          background: #fff;
+          padding: 0.4rem 1.0rem 0.2rem 5.0rem;
+          border-radius: 0 15px 15px 0;
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 1.5rem;
+          font-size: 2.0rem;
+          line-height: 2.0;
+        }
+        
+        li::before {
+          font-family: "Font Awesome 5 Free";
+          content:"";
+          display: inline-block;
+          position: absolute;
+          padding: 0em;
+          color: white;
+          font-weight: 900;
+          width: 5.0rem;
+          text-align: center;
+          height: 5.0rem;
+          line-height: 5.0rem;
+          left: -1.5rem;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          border-radius: 50%;
+          box-shadow: 1px 1px 2px grey;
+        }
+        
+        li:hover {
+          opacity: 0.7;
+        }
+        
+        .menu5::before {
+          content: "\f015";
+          background: $keyColor;
+        }
+        
+        .menu6::before {
+          content: "\f007";
+          background: lighten($keyColor, 10%);
+        }
+        
+        .menu7::before {
+          content: "\f001";
+          background: lighten($greenColor, 10%);
+        }
+        
+        .menu8::before {
+          content: "\f086";
+          background: lighten($subColor, 10%);
+        }
+        
+        .menu9::before {
+          content: "\f128";
+          background: lighten(#FEA700, 10%);
+        }
+        
+        .menu10::before {
+          content: "\f3c5";
+          background: $greenColor;
+        }
+        
+        .menu11::before {
+          content: "\f095";
+          background: #FCFA83;
+        }
+        
+      }
+      
+    }
+    
+    #class{
+      .class-title {
+        margin: 5.0rem 2.0rem 7.0rem 2.0rem;
+      }
+        
+      .other-wrp::after {
+        right: -30%;
+      }  
+    }
+    
+  }
+  
+}
+
+/*------------------width1023以下(iPadPro未満)-----------------
+---------------------------------------------*/
+@media screen and (max-width:1023px) {
+  
+  body {
+    
+    #class {
+      padding: 0 5%;
+      
+      .class-wrp {
+        width: 100%;
+      }
+      
+      .detail-wrp {
+        width: 100%;
+        
+        .detail {
+          flex-direction: column;
+          margin-bottom: 8.0rem;
+          
+          .detail-text {
+            width: 100%;
+          }
+          
+          .detail-img {
+            width: 60%;
+            margin-top: 5.0rem;
+          }
+        }
+      }
+      
+      .other-wrp {
+        width: 100%;
+        margin-bottom: 5.0rem;
+      }
+      
+      .other-wrp::after {
+        right: 3%;
+        top: 5%;
+      }
+    }
+  
+    #voice {
+      
+      padding: 0 5%;
+      
+      .pc-voice {
+        display: none;
+      }
+      
+      .sp-voice {
+        display: block;
+      }
+      
+      .voice {
+        flex-direction: column;
+        margin: 3.0rem 0;
+        
+        .two-wrp {
+          width: 100%;
+          flex-direction: column;
+          
+          .students {
+            width: 100%;
+            padding-bottom: 2.0rem;
+            margin-bottom: 2.0rem;
+            border-bottom: dashed 2px #ffc3c3;
+          }
+          
+          .parents {
+            width: 100%;
+          }
+          
+        }
+        
+        .hoiku {
+          width: 100%;
+          flex-direction: column;
+          margin-bottom: -3.0rem;
+          
+          .one-wrp {
+            width: 100%;
+            margin-bottom: 3.0rem;
+          }
+        }
+        
+        .gallery {
+          width: 50%;
+          margin-top: 2.5rem;
+        }
+        
+      }      
+    }
+    
+    #faq {
+      padding: 0 5%;
+      
+      .faq-wrp {
+        width: 100%;
+      }
+    }
+    
+    #common {
+      
+      #acsess {
+        flex-direction: column;
+        
+        .access-text {
+          width: 100%;
+          padding: 0 7%;
+          margin-bottom: 2.0rem;
+
+          h3 {
+            
+            margin-bottom: 2.5rem;
+            
+            img {
+              width: 50%;
+              margin: 0 auto;
+            }
+          }
+        }
+        
+        .access-text::before {
+          left: 75%;
+          top: 35%; 
+        }
+        
+        .access-text::after {
+          right: 3%;
+          bottom: 20%;
+        }        
+        
+        .gmap {
+          width: 100%;
+        }
+      }
+    }
+    
+  }
+} 
+
+/*------------------width767以下(iPad未満)-----------------
+---------------------------------------------*/
+@media screen and (max-width:767px) {
+  
+  body {
+    
+    background-color: $baseColor;
+    padding: 0;
+    
+    #pan {
+      display: none;
+    }
+    
+    header {
+      
+      .sp-rogo {
+        width: 55%;
+        margin: 0;
+        margin-left: 5%;
+        
+        img {
+          margin-left: 20%;
+        }
+      }  
+        
+      .menu-btn {
+        top: 3%;
+        right: 5%;
+        font-size: 3.0rem;
+      }
+      
+      .sp-menubtn_toggle {
+        width: 100%;
+        left: 0;
+        top: 10%;
+        padding-left: 1.0rem;
+      }
+      
+    }
+    
+    .sp-topimg {
+      
+      display: block;
+      
+      h2 {
+        color: $greenColor;
+        text-align: center;
+        margin: 1.5rem 0 1.0rem;
+        padding: 0 1.0rem;
+        font-weight: normal;
+        font-size: 1.3rem;
+      }
+    }
+    
+    .pc-topimg {
+      display: none;
+    }
+    
+    #intro {
+      padding: 0 3%;
+      width: 100%;
+      margin: 1.5rem 0 3.0rem;
+      
+      h2 {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      
+      .greet-wrp {
+        flex-wrap: wrap;
+        margin-bottom: 5.0rem;
+        
+        .greet-text {
+          width: 100%;
+          padding: 3.0rem 1.0rem;
+          margin-bottom: 3.0rem;
+          
+          h1 {
+            font-size: 1.8rem;
+          }
+        }
+        
+        .greet-img {
+          width: 90%;
+        }
+      }
+      
+      .import-wrp {
+        margin-bottom: 2.0rem;
+        flex-wrap: wrap;
+        
+        .import-content {
+          
+          .import {
+            width: 95%;
+            margin: 0 auto;
+            margin-bottom: 3.5rem;
+            padding: 1.0rem 1.5rem 1.5rem;
+            
+            h3 {
+              font-size: 1.8rem;
+              line-height: 1.3;
+              margin-bottom: 1.0rem;
+            }
+            
+            span {
+              font-size: 3.0rem;
+            }
+          }
+        }
+      }
+      
+      .teacher-wrp {
+        margin-bottom: 5.0rem;
+        
+        .teacher {
+          flex-wrap: wrap;
+          
+          .teacher-img {
+            width: 50%;
+            margin: 0 auto;
+          }
+          
+          .teacher-text {
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 2.0rem;
+            
+            h4 {
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+      }
+      
+      .garrely-wrp {
+        margin-bottom: 5.0rem;
+        
+        .garrely {
+          flex-wrap: wrap;
+  
+          img {
+            width: 49%;
+            margin-bottom: 1.0rem;
+          }
+        }
+      }
+    }
+    
+    #class {
+      padding: 0 3%;
+      
+      .class-title {
+        margin: 3.0rem 0;
+      }
+      
+      .class-wrp {
+        
+        margin: 6.0rem 0 5.0rem;
+        
+        .class {
+          a {
+            padding: 1.0rem;
+          }
+          
+          h1 {
+            .sponly {
+              display: block;
+            }
+          }
+          
+          h2 {
+              display:none;
+          }
+        }
+      }
+      
+      .detail-wrp {
+        padding: 0 3%;
+        
+        .detail {
+          margin-bottom: 5.0rem;
+          
+           .detail-img {
+             width: 70%;
+             margin-top: 3.0rem;
+           }
+        }
+      }
+      
+      .other-wrp::after {
+        content: url(../img/class/kuma-sp.jpg);
+        right: 8%;
+        top: 3%;
+      }
+      
+    }
+    
+    #voice {
+      padding: 0 3%;
+      
+      .voice-title {
+        margin: 3.0rem 0 4.0rem;
+      }
+      
+      .voice-title::after {
+        top: 100%;
+        right: 5%;
+      }  
+      
+      .voice {
+        .two-wrp {
+          padding: 3.5rem 2.0rem;
+        }
+      }
+    }
+    
+    #faq {
+      padding: 0 3%;
+      
+      .faq-title {
+        margin: 3.0rem 0;
+      }
+      
+      .faq-title::after {
+        top: 50%;
+        right: 5%;
+      }
+      
+      .faq-wrp {
+        width: 100%;
+        padding: 1.5rem;
+      }
+    }
+    
+    #contact {
+      padding: 0 3%;
+
+      .contact-title {
+        margin: 3.0rem 0;
+      }
+      
+      .contact-title::after {
+        top: 58%;
+      }      
+      
+      .contact-tel {
+        margin: 5.0rem 5% 4.0rem;
+      }
+      
+      .contact-form {
+        margin-top: 4.0rem;
+        
+        .form-wrp {
+          width: 100%;
+          padding: 1.5rem;
+          margin-top: 1.0rem;
+          
+          .form {
+            
+            input[type="submit"] {
+              margin: 2.0rem 0;
+            }
+            
+            form {
+              width: 50%;
+            }
+          }
+        }
+      }
+      
+      
+    }
+    
+    #common {
+      padding: 0;
+      
+      #acsess {
+        
+        .access-text {
+          
+          h3 {
+            
+            img {
+              width: 60%;
+            }
+          }
+        }
+        
+        .access-text::before,
+        .access-text::after {
+          content: none;
+        }
+        
+        .gmap {
+          width: 100%;
+        }
+      }
+    }
+    
+    footer {
+      margin-top: 2.0rem;
+      font-size: 1.0rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+/*------------------width330以下-----------------
+---------------------------------------------*/
+@media screen and (max-width:330px) {
+  body {
+    
+    #class {
+      .class-title::after {
+      right: 0%;
+      bottom: -40%;
+      }  
+      
+      .class-wrp {
+        flex-direction: column;
+        
+        .class {
+          width:100%;
+          margin-top: 1.0rem;
+          
+        h1 {
+          .sponly {
+            display: none;
+          }
+        } 
+        
+        h2 {
+          display: block;
+        }
+          
+        }
+      }
+    }
+  }
+} 
