@@ -379,6 +379,7 @@ body {
         img {
           width:30%;
           height: auto;
+          overflow: hidden;
           margin-bottom: 3.0rem;
         }
     }
@@ -679,6 +680,10 @@ body {
       
       text-align: center;
       margin-bottom: 5.0rem;
+      
+      .sponly {
+        display: none;
+      }
       
       .contact-title {
         margin: 5.0rem 0 ;
@@ -1209,8 +1214,9 @@ body {
       
       .sp-menubtn_toggle {
         width: 100%;
+        height: 90vh;
         left: 0;
-        top: 11.5%;
+        top: 10vh;
         padding-left: 1.0rem;
       }
       
@@ -1419,6 +1425,10 @@ body {
     #contact {
       padding: 0 3%;
 
+      .sponly {
+        display: block;
+      }
+        
       .contact-title {
         margin: 3.0rem 0;
       }
@@ -1428,11 +1438,12 @@ body {
       }      
       
       .contact-tel {
-        margin: 5.0rem 5% 4.0rem;
+        margin: 5.0rem 3% 4.0rem;
       }
       
       .contact-form {
         margin-top: 4.0rem;
+        
         
         .form-wrp {
           width: 100%;
@@ -1476,7 +1487,23 @@ body {
         }
         
         .gmap {
-          width: 100%;
+          width: 95%;
+          margin: 0 auto;
+          position: relative;
+          padding-bottom: 56.25%;
+          padding-top: 30px;
+          height: 0;
+          overflow: hidden;
+        }
+           
+        .gmap iframe,
+        .gmap object,
+        .gmap embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         }
       }
     }
