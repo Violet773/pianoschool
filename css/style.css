@@ -170,6 +170,8 @@ body {
           color: #fd6576; }
         body #intro .greet-wrp .greet-text p {
           line-height: 2; }
+          body #intro .greet-wrp .greet-text p .sponly {
+            display: none; }
       body #intro .greet-wrp .greet-img {
         width: 35%; }
     body #intro .import-wrp {
@@ -757,6 +759,8 @@ body {
             font-size: 1.8rem; }
           body #intro .greet-wrp .greet-text p {
             text-align: center; }
+            body #intro .greet-wrp .greet-text p .sponly {
+              display: block; }
         body #intro .greet-wrp .greet-img {
           width: 90%; }
       body #intro .import-wrp {
