@@ -860,6 +860,8 @@ body {
       padding: 0; }
       body #common #acsess .access-text h3 img {
         width: 60%; }
+      body #common #acsess .access-text .pconly {
+        display: none; }
       body #common #acsess .access-text::before,
       body #common #acsess .access-text::after {
         content: none; }

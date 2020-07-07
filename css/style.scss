@@ -1479,6 +1479,10 @@ body {
               width: 60%;
             }
           }
+          
+          .pconly {
+            display: none;
+          }
         }
         
         .access-text::before,
