@@ -228,6 +228,7 @@ body {
       justify-content: space-between; }
     body #intro .garrely-wrp img {
       width: 30%;
+      height: auto;
       margin-bottom: 3.0rem; }
   body #class .class-title {
     text-align: center;
@@ -721,7 +722,7 @@ body {
     body header .sp-menubtn_toggle {
       width: 100%;
       left: 0;
-      top: 10%;
+      top: 11.5%;
       padding-left: 1.0rem; }
     body .sp-topimg {
       display: block; }
@@ -750,6 +751,8 @@ body {
           margin-bottom: 3.0rem; }
           body #intro .greet-wrp .greet-text h1 {
             font-size: 1.8rem; }
+          body #intro .greet-wrp .greet-text p {
+            text-align: center; }
         body #intro .greet-wrp .greet-img {
           width: 90%; }
       body #intro .import-wrp {
